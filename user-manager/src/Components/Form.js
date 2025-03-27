@@ -25,7 +25,7 @@ export default function Form() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("https://springboot-training-2.onrender.com/api/add", {
+      const response = await fetch("https://springboot-training-2.onrender.com/api/create", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
