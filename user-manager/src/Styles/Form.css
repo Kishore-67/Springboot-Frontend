@@ -1,128 +1,198 @@
+.title{
+  display:flex;
+  
+}
+
+/* Main Container */
 .form-user-container {
   padding: 30px;
   display: flex;
   flex-direction: row;
-  justify-content:space-around;
-  align-items: center;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+  
+  min-height: 100vh;
 }
 
+/* Form Container */
 .form-container {
   width: 40%;
-  height: 60vh;
-  background-color: #f9f9f9;
-  padding: 20px;
-  border: 1px solid #ddd;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  box-sizing: border-box;
+  min-width: 350px;
+  height: auto;
+  background: #eeeeee;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
 }
 
+.form-container:hover {
+  transform: scale(1.02);
+}
 
+/* Form Title */
+.form-container h2 {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+}
 
+/* Form Inputs */
 .form-container label {
+  font-weight: 500;
+  color: #555;
   display: block;
-  margin-bottom: 10px;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 5px;
 }
 
 .form-container input {
   width: 100%;
-  height: 40px;
-  margin-bottom: 20px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  
+  height: 45px;
+  margin-bottom: 15px;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: 0.3s ease-in-out;
 }
 
 .form-container input:focus {
-  border-color: #aaa;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-color: #1e90ff;
+  box-shadow: 0 0 10px rgba(30, 144, 255, 0.3);
+  outline: none;
 }
 
+/* Submit Button */
 .form-container .submit-btn {
-  background-color: #333;
-  color: #fff;
-  padding: 10px 20px;
+  background: linear-gradient(135deg, #060607, #101111);
+  color: #7A7B7B;
+  padding: 12px 25px;
   border: none;
-  border-radius: 5px;
+  border-radius: 15px;
+  font-size: 18px;
   cursor: pointer;
-  
+  transition: 0.3s;
 }
 
 .form-container .submit-btn:hover {
-  background-color: #444;
+  background: linear-gradient(135deg, #111111, #111111);
+  transform: scale(1.05);
 }
+
+/* User List Container */
 .user-container {
   width: 40%;
-  height: 60vh;
-  background-color: #f7f7f7;
-  padding: 20px;
-  border: 1px solid #ddd;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  box-sizing: border-box;
+  min-width: 350px;
+  height: auto;
+  background: #eeeeee;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
 }
 
-.user-container h1 {
-  margin-top: 0;
-  font-size: 24px;
-  color: #333;
+.user-container:hover {
+  transform: scale(1.02);
 }
 
+.user-container {
+  width: 40%;
+  min-width: 350px;
+  height: auto;
+  background: #eeeeee;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.user-container:hover {
+  transform: scale(1.02);
+}
+
+/* User List */
 .user-list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
+/* Individual User Item */
 .user-item {
+  background: #f9f9f9;
   padding: 15px;
-  border-bottom: 1px solid #ddd;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.user-item:hover {
+  background: #f1f1f1;
+  transform: translateY(-2px);
+}
+
+/* Collapsed state (default) */
+.user-item.collapsed {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 
-.user-item:last-child {
-  border-bottom: none;
+/* Expanded state */
+.user-item.expanded {
+  background: #e0e0e0;
+  padding: 20px;
+  transition: all 0.3s ease-in-out;
 }
 
+/* User Info */
 .user-item .user-info {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
-.user-item .user-info h2 {
-  margin-top: 0;
+.user-item .user-info h3 {
+  margin: 0;
   font-size: 18px;
-  color: #333;
+  font-weight: bold;
+  color: #1e1e1e;
 }
 
-.user-item .user-info p {
-  font-size: 16px;
-  color: #666;
+/* User details (hidden by default) */
+.user-item .details {
+  display: none;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555;
 }
 
-.user-item .actions {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.user-item.expanded .details {
+  display: block;
 }
 
-.user-item .actions button {
-  background-color: #333;
-  color: #fff;
-  padding: 5px 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-left: 10px;
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .form-user-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
 
-.user-item .actions button:hover {
-  background-color: #444;
+  .form-container,
+  .user-container {
+    width: 90%;
+  }
 }

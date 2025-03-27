@@ -1,0 +1,36 @@
+.shiny-text {
+    color: #b5b5b5a4; /* Adjust this color to change intensity/style */
+    background: linear-gradient(
+      120deg,
+      rgba(255, 1, 1, 0) 40%,
+      rgb(251, 0, 255) 50%,
+      rgba(37, 150, 255, 0.884) 60%
+    );
+    font-weight: bold;
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    display: inline-block;
+    animation: shine 5s linear infinite;
+  }
+  
+  @keyframes shine {
+    0% {
+      background-position: 100%;
+    }
+    100% {
+      background-position: -100%;
+    }
+  }
+  
+  .shiny-text.disabled {
+    animation: none;
+  }
+  .butclass{
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .newclass{
+    font-size: 40px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }

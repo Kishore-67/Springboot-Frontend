@@ -9,6 +9,7 @@ function App() {
       <Routes>
         <Route path="/" element={<LandingPage/>} />
         <Route path="/add" element={<Form/>} />
+        <Route path="/update" element={<Form/>} />
       </Routes>
     </BrowserRouter>
   );
