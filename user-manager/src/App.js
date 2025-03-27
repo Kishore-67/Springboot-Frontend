@@ -1,12 +1,16 @@
 import './App.css';
-import '../src/Components/Nav'
-import Nav from '../src/Components/Nav';
+import { Routes, BrowserRouter, Route } from "react-router-dom";
+import Form from '../src/Components/Form'
+import LandingPage from './Components/Landingpage'
+
 function App() {
   return (
-    <div className="App">
-      
-        <Nav/>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LandingPage/>} />
+        <Route path="/add" element={<Form/>} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

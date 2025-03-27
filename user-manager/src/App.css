@@ -1,30 +1,4 @@
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #f4f4f4;
-  padding: 16px 24px;
-  border-bottom: 2px solid #ccc;
-}
-
-h1 {
-  font-size: 24px;
-  color: #333;
-  margin: 0;
-}
-
-button {
-  background-color: #3c94f2;
-  width: 7rem;
-  color: white;
-  padding: 8px 16px;
-  border: none;
-  border-radius: 50px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #45a049;
+/* Set the background color of the HTML document */
+html {
+  background-color: #131313;
 }
